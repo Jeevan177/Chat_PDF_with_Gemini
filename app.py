@@ -54,8 +54,7 @@ def get_conversational_chain():
 
 
 def user_input(user_question, vector_store):
-    embeddings = GoogleGenerativeAIEmbeddings(model = "models/embedding-001")
-    
+  
     # new_db = FAISS.load_local("faiss_index", embeddings, allow_dangerous_deserialization=False)
     docs = vector_store.similarity_search(user_question)
 
